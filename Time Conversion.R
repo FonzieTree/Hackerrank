@@ -1,0 +1,19 @@
+con=file('stdin',open='r')
+open(con)
+data1=readLines(con,warn=F)
+if(substr(data1,9,10)=="PM"){
+    if(as.numeric(substr(data1,1,2))<12){
+    data2=paste(as.numeric(substr(data1,1,2))+12,substr(data1,3,8),sep="")
+    }else{
+    data2=substr(data1,1,8)
+    }
+}
+if(substr(data1,9,10)=="AM"){
+    if(as.numeric(substr(data1,1,2))<12){
+    data2=substr(data1,1,8)
+    }else{
+    data2=paste("00",substr(data1,3,8),sep="")
+    }
+}
+cat(data2,sep='\n')
+close(con)
