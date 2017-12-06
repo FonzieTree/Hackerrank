@@ -1,0 +1,21 @@
+con=file('stdin',open='r')
+open(con)
+data=readLines(con,warn=F)
+data=as.numeric(unlist(strsplit(data,split=' ')))
+if(data[2]==data[4])
+    {
+    out="NO"
+}else{
+p=(data[3]-data[1])/(data[2]-data[4])
+if(p<0){
+    out="NO"
+}
+if(p>0){
+    if(p%%1==0)
+        {out="YES"}
+    else{
+    out="NO"
+    }
+}
+}
+cat(out,'\n')
