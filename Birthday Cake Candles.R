@@ -1,0 +1,6 @@
+con=file('stdin',open='r')
+open(con)
+data=readLines(con,warn=F)
+data=as.numeric(unlist(strsplit(data,split=' '))[-1])
+out=sum(data==data[which.max(data)])
+cat(out,'\n')
