@@ -1,0 +1,7 @@
+con=file('stdin',open='r')
+open(con)
+data=readLines(con)
+x=as.numeric(strsplit(data[2],split=' ')[[1]])
+x=sort(x)
+a=names(which(table(x)==max(table(x)))[1])
+cat(a,'\n')
