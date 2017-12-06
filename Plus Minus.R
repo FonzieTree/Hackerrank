@@ -1,0 +1,13 @@
+options(digits=6)
+con=file('stdin',open='r')
+open(con)
+data=readLines(con,warn=F)
+data=as.numeric(unlist(strsplit(data,split=' '))[-1])
+con=file('stdin',open='r')
+n=length(data)*1.000000
+f1=format(sum(data>0)/n,nsmall=6)
+f2=format(sum(data==0)/n,nsmall=6)
+f3=format(sum(data<0)/n,nsmall=6)
+cat(f1,'\n')
+cat(f3,'\n')
+cat(f2,'\n')
