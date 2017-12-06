@@ -1,0 +1,11 @@
+con=file('stdin',open='r')
+open(con)
+data=readLines(con,warn=F)
+data=as.numeric(unlist(strsplit(data,split=' '))[-1])
+n=length(data)
+s=n^0.5
+m=matrix(data,s,s)
+a1=matrix(rep(1:s),s,2)
+a2=cbind(c(1:s),s+1-c(1:s))
+out=abs(sum(m[a1])-sum(m[a2]))
+cat(out,'\n')
