@@ -1,6 +1,3 @@
-#December 2017 by Shuming Fang. 
-#fangshuming519@gmail.com.
-#https://github.com/FonzieTree
 #https://www.hackerrank.com/challenges/a-very-big-sum/problem
 options(scipen=200)
 con=file('stdin',open='r')
